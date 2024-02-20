@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-content">
+        <!-- <form action="https://echo.htmlacademy.ru" method="get">
+            <label for="username">Username</label> for qaysi inputga bog'langanligini bilish u-n
+            <input type="text" name="username" id="username">  bunda labelning "for"qiymati inputning "id"qiymati bilan bir xil bo'lishi kerak <br><br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password"><br><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"><br><br>
+            <label for="sana">Tug'ilgan sana</label>
+            <input type="date" name="date" id="sana"><br><br>
+            <label for="student">Talaba</label>
+            <input type="checkbox" name="student" id="student"><br><br>
+            <hr>
+            <label for="erkak">Erkak</label>
+            <input type="radio" name="gender" id="erkak" value="male"><br><br>
+            <label for="ayol">Ayol</label>
+            <input type="radio" name="gender" id="ayol" value="female"><br><br>
+            <label for="passport">Passport</label>
+            <input type="file" name="passport" id="passport"><br><br>
+            <hr>
+            <label for="tajriba">Tajribangiz (yil)</label>
+            <select name="experience" id="tajriba">
+                <option value="0">Tajribam yo'q</option>
+                <option value="1">1 yil</option>
+                <option value="2">2 yil</option>
+                <option value="3">3 yil</option>
+                <option value="4">4 yil</option>
+            </select><br><br>
+            <label for="haqida">Siz haqingizda</label>
+            <textarea name="about" id="haqida" cols="50" rows="10"></textarea>
+            <button type="submit">Registration</button>
+            soyalar bn ishlash
+            <div class="shadow-box"></div>
+        </form>
+        <form action="/server.php" method="get">
+            <label for="username-input"></label>
+            <input type="text" name="username" id="username-input" placeholder="username" required>
+            <button type="submit">Jo'natish</button>
+        </form> -->
+        <form action="https://echo.htmlacademy.ru" method="post">
+            <div>
+                <label for="fullname-input">Ismingiz</label>
+                <input type="text" name="fullname" id="fullname-input" placeholder="Ism-familiya" required>
+            </div>
+            <div>
+                <label for="dob-input">Tug'ilgan sana</label>
+                <input type="date" name="dob" id="dob-input" required>
+            </div>
+            <div>
+                <label for="course-type-select">Qaysi kurni tanlaysiz?</label>
+                <select name="course-type" id="course-type-select">
+                    <optgroup label="Ofline lessons">
+                        <option value="morning">Ertalabki</option>
+                        <option value="afternoon">Peshingi</option>
+                        <option value="evening">Kechki</option>
+                    </optgroup>
+                    <optgroup label="Online lessons">
+                        <option value="standart" selected>Standart</option>
+                        <option value="pro">Pro</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Qo'shimcha imkoniyatlar</legend>
+                    <!-- <label>
+                    Shu variantda ham ishlatsa bo'ladi
+                    <input type="checkbox" name="laptop" id="laptop-checkbox">Noutbuklar
+                    </label> -->
+                    <input type="checkbox" name="laptop" id="laptop-checkbox">
+                    <label for="laptop-checkbox">Noutbuklar</label> <br>
+                    <label>
+                        <input type="checkbox" name="monitor">Monitor
+                    </label> <br>
+                    <label>
+                        <input type="checkbox" name="wifi" checked>Internet
+                    </label> <br>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>To'lov usuli</legend>
+                    <!-- bunda hammasiga bir xil name beriladi value ham berilishi shart aytgancha nameda 1 nechta so'zdan iborat bo'lsa pastki_chiziqcha bilan yoziladi -->
+                    <label>
+                        <input type="radio" name="payment_type" value="click">Click
+                    </label>
+                    <label>
+                        <input type="radio" name="payment_type" value="cash">Naqd pul
+                    </label>
+                </fieldset>
+            </div>
+            <div>
+                <!-- datalist -->
+                <label for="district-input">Tuman</label>
+                <input type="text" name="district" id="district-input" list="districts-list" placeholder="Tumaningiz..." required>
+                <!-- bu qo'shimcha ma'lumot ulash uchun id lar bir xil bo'lishi kerak -->
+                <datalist id="districts-list">
+                    <option>Zomin</option>
+                    <option>Zaribdor</option>
+                    <option>Paxtakor</option>
+                    <option>G'allarol</option>
+                    <option>Do'stlik</option>
+                    <option>G'alaba</option>
+                </datalist>
+            </div>
+            <div>
+                <label for="message-input">Xabar</label>
+                <textarea name="message" id="message-input" required></textarea>
+            </div>
+            <button type="submit">Ro'yxatdan o'tish</button>
+        </form>
+    </main>
+
+</body>
+</html>
